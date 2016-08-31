@@ -101,7 +101,7 @@ var getUnanswered = function(tags) {
 };
 
 var getInspiration = function(tags) {
-    $.ajax("http://api.stackexchange.com/2.2/tags/" + tags + "/top-answerers/all_time?site=stackoverflow")
+    $.ajax("https://api.stackexchange.com/2.2/tags/" + tags + "/top-answerers/all_time?site=stackoverflow")
         .done(function(result) {
             var searchResults = showSearchResults(tags, result.items.length);
 
